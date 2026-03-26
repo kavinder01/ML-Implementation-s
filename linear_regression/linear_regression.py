@@ -24,10 +24,10 @@ def compute_gradient(X, y, w, b):
 
 
 
-def gradient_descent_loop ( X, y, w=None, b=0.0, alpha=0.01, num_iterations=10000):
+def gradient_descent_loop ( X, y, w=None, b=0.0, alpha=0.01, iterations=10000):
     if w is None:
         w = np.zeros(1)
-    for i in range(num_iterations):
+    for i in range(iterations):
         dw , db = compute_gradient(X, y, w, b)
         w = w - alpha * dw
         b = b - alpha * db
